@@ -2,6 +2,7 @@ import React from "react";
 import CounterDisplay from "../component/counter/CounterDisplay";
 import CounterControlPanel from "../component/counter/CounterControlPanel";
 import { connect } from 'react-redux'
+import { actionTypes } from "../store/actionTypes";
 
 function Counter(props) {
 
@@ -40,11 +41,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    increase: () => dispatch({ type: "INCREASE" }),
-    decrease: () => dispatch({ type: "DECREASE" }),
-    minus: () => dispatch({ type: "MINUS" }),
-    plus: () => dispatch({ type: "PLUS" }),
-    reset: () => dispatch({ type: "RESET" })
+    increase: () => dispatch({ type: actionTypes.INCREASE }),
+    decrease: () => dispatch({ type: actionTypes.DECREASE }),
+    minus: () => dispatch({ type: actionTypes.MINUS }),
+    plus: () => dispatch({ type: actionTypes.PLUS, value: 20 }),
+    reset: () => dispatch({ type: actionTypes.RESET, value: 20 })
   }
 }
 
