@@ -43,9 +43,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     increase: () => dispatch({ type: actionTypes.INCREASE }),
     decrease: () => dispatch({ type: actionTypes.DECREASE }),
-    minus: () => dispatch({ type: actionTypes.MINUS }),
+    minus: () => dispatch({ type: actionTypes.MINUS, value: 20 }),
     plus: () => dispatch({ type: actionTypes.PLUS, value: 20 }),
-    reset: () => dispatch({ type: actionTypes.RESET, value: 20 })
+    reset: () => dispatch({ type: actionTypes.RESET })
   }
 }
 

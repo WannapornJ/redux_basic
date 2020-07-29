@@ -20,13 +20,13 @@ const reducer = (state = initialState, action) => {
     if (action.type === actionTypes.PLUS) {
         return {
             ...state,
-            counter: state.counter + state.value
+            counter: state.counter + action.value
         }
     }
     if (action.type === actionTypes.MINUS) {
         return {
             ...state,
-            counter: state.counter + state.value
+            counter: state.counter - action.value
         }
     }
     if (action.type === actionTypes.RESET) {
