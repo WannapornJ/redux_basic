@@ -3,6 +3,8 @@ import CounterDisplay from "../component/counter/CounterDisplay";
 import CounterControlPanel from "../component/counter/CounterControlPanel";
 import { connect } from 'react-redux'
 import { actionTypes } from "../store/actionTypes";
+import CounterList from "../component/counter/CounterList";
+import ButtonRecord from "../component/counter/ButtonRecord";
 
 function Counter(props) {
 
@@ -29,6 +31,8 @@ function Counter(props) {
         text="Minus"
         change={props.minus}
       />
+      <ButtonRecord/>
+      <CounterList/>
     </div>
   );
 }

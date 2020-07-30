@@ -1,7 +1,8 @@
 import { actionTypes } from "./actionTypes"
 
 const initialState = {
-    counter: 0
+    counter: 0,
+    counterList: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -32,6 +33,13 @@ const reducer = (state = initialState, action) => {
     if (action.type === actionTypes.RESET) {
         return {
             ...state,
+            counter: 0
+        }
+    }
+    if (action.type === actionTypes.RECORD_COUNTER) {
+        return {
+            ...state,
+            counterList: [...state.counterList, state.counter],
             counter: 0
         }
     }

@@ -4,10 +4,13 @@ const PLUS = "PLUS"
 const MINUS = "MINUS"
 const RESET = "RESET"
 
+const RECORD_COUNTER = "RECORD_COUNTER"
+
 export const actionTypes = {
     INCREASE,
     DECREASE,
     PLUS,
     MINUS,
-    RESET
+    RESET,
+    RECORD_COUNTER
 }
